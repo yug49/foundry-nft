@@ -8,18 +8,18 @@ import {BasicNft} from "../src/BasicNft.sol";
 
 contract MintBasicNft is Script {
 
-    string constant STBERNARD = "https://bafybeigkpf3iudp5t33u7nhaa66jdpyxfo57ehua3uibgo5elbyzyqktty.ipfs.dweb.link?filename=stBernard.json";
+    string constant STBERNARD = "ipfs://Qmby2VCac5oLN4M5SAwRDWin7a78pb2YLGMQWJ3xK8iw6D";
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment(
             "BasicNft",
             block.chainid
         );
-        mingNftOnContract(mostRecentlyDeployed);
+        mintNftOnContract(mostRecentlyDeployed);
 
     }
 
-    function mingNftOnContract(address contractAddress) public {
+    function mintNftOnContract(address contractAddress) public {
         vm.startBroadcast();
         BasicNft(contractAddress).mintNft(STBERNARD);
         vm.stopBroadcast();
