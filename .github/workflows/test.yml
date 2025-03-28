@@ -23,10 +23,6 @@ jobs:
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
 
-      - name: Install Dependencies
-        run: |
-          forge install Cyfrin/foundry-devops@v0.0.11 --no-commit && forge install foundry-rs/forge-std@v1.5.3 --no-commit && forge install openzeppelin/openzeppelin-contracts@v4.8.3 --no-commit
-
       - name: Show Forge version
         run: |
           forge --version
