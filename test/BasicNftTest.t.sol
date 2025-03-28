@@ -10,7 +10,7 @@ contract BasicNftTest is Test {
     DeployBasicNft public deployer;
     BasicNft public basicNft;
     address public USER = makeAddr("user");
-    string constant STBERNARD = "https://bafybeigkpf3iudp5t33u7nhaa66jdpyxfo57ehua3uibgo5elbyzyqktty.ipfs.dweb.link?filename=stBernard.json";
+    string constant STBERNARD = "ipfs://QmVmPUUf1ERaknbaFf76cTMv1DL8RaKzoZ7z3dofsDEgp2";
 
     function setUp() public {
         deployer = new DeployBasicNft();
@@ -34,6 +34,5 @@ contract BasicNftTest is Test {
 
         assert(basicNft.balanceOf(USER) == 1);
         assert(keccak256(abi.encodePacked(STBERNARD)) == keccak256(abi.encodePacked(basicNft.tokenURI(0))));
-        
     }
 }

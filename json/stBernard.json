@@ -1,7 +1,7 @@
 {
     "name": "ST. BERNARD",
     "description": "An adorable ST. BERNARD pup!",
-    "image": "https://bafybeicz57su3zyafexgchnfqej7zuxfa3e4xgz22yzmge6nzkhfmskqs4.ipfs.dweb.link?filename=st-bernard.png",
+    "image": "ipfs://QmUPjADFGEKmfohdTaNcWhp7VGk26h5jXDA7v3VtTnTLcW",
     "attributes" : [
         {
             "trait_type": "cuteness",
